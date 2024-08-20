@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow of the body */
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Shirts Container */
+.shirts-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px;
+    gap: 20px; /* Space between shirt items */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.shirts-container::-webkit-scrollbar {
+    height: 8px; /* Custom scrollbar height */
+}
+
+.shirts-container::-webkit-scrollbar-thumb {
+    background-color: #555; /* Scrollbar thumb color */
+    border-radius: 4px; /* Round scrollbar edges */
+}
+
+.shirts-container::-webkit-scrollbar-track {
+    background-color: #000; /* Scrollbar track color */
+}
+
+/* Individual Shirt Item */
+.shirt-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 30%; /* Ensures 3 items are visible at a time */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; /* Prevent items from stretching */
+}
+
+/* Shirt Image */
+.shirt-item img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Price and Buy Button Container */
+.price-buy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Shirt Price */
+.price {
+    font-size: 18px;
+    color: #e60023;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

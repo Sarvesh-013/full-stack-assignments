@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Silk and Stone</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="shirts.html">Shirts</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="others.html">Others</a>
+            <button id="login-btn">Login</button>
+            <button id="cart-btn">Cart</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+    </main>
+
+    <script>
+        // Function to load cart items from localStorage
+        function loadCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalContainer = document.getElementById('cart-total');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            // Check if the cart is empty
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                cartTotalContainer.innerHTML = '';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p>${item.name}</p>
+                    <p>Price: $${item.price.toFixed(2)}</p>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                total += item.price;
+            });
+
+            cartTotalContainer.innerHTML = `Total: $${total.toFixed(2)}`;
+        }
+
+        // Load cart items when the page loads
+        window.onload = loadCart;
+    </script>
+</body>
+</html>

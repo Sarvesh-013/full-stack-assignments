@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Accessory List */
+.accessory-list {
+    display: flex;
+    overflow-x: scroll;  /* Enable horizontal scrolling */
+    padding: 80px 20px 20px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 20px; /* Add space between each accessory item */
+}
+
+.accessory-list::-webkit-scrollbar {
+    height: 8px; /* Custom scrollbar height */
+}
+
+.accessory-list::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar */
+    border-radius: 4px; /* Round edges of scrollbar */
+}
+
+.accessory-list::-webkit-scrollbar-track {
+    background-color: #000; /* Track color */
+}
+
+/* Individual accessory item */
+.accessory {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 30%; /* Ensure each accessory takes 30% of the container width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessory image */
+.accessory img {
+    width: 80%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: -17px;
+}
+
+/* Accessory information */
+.accessory-info h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.accessory-info p {
+    margin: 5px 0;
+}
+
+/* Accessory price */
+.accessory-price {
+    font-size: 18px;
+    color: #e60023;
+    margin-bottom: 10px;
+}
+
+/* View Details link */
+.accessory-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.accessory-info a:hover {
+    text-decoration: underline;
+}

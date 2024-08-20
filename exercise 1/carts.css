@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation bar styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 10px;
+}
+
+.nav a, .nav button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav a:hover, .nav button:hover {
+    background-color: #555;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart item container styling */
+#cart-items {
+    margin-bottom: 20px;
+}
+
+/* Individual cart item styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart total styling */
+#cart-total {
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav a, .nav button {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+}

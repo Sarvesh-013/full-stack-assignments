@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('https://getwallpapers.com/wallpaper/full/e/2/a/574964.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+.logo img {
+    background-color: rgba(0, 0, 0, 0);
+    height: 60px; /* Adjust height if needed for better clarity */
+    margin-right: 10px;
+}
+
+.nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Base styles for links */
+.nav a, .learn-more-link, .category a {
+    text-decoration: none; /* Remove default underline */
+    color: #ffffff;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Pseudo-element for underline effect */
+.nav a::after, .learn-more-link::after, .category a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px; /* Position the underline below the text */
+    left: 50%;
+    background-color: #007bff;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+/* Hover effect: underline expands from center to edges */
+.nav a:hover::after, .learn-more-link:hover::after, .category a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.nav button {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.learn-more-btn {
+    background-color: #ffffff00;
+    color: #fff5f5;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #44444400;
+    color: #fff;
+}
+
+.welcome-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.welcome-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-us {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Dialog Styles */
+.dialog {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-btn {
+    color: #f70606;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(248, 7, 7);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: rgb(14, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
