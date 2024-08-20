@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Student Information</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+  <header>
+    <h1>Student Information</h1>
+  </header>
+
+  <main>
+    <div class = "container">
+    <h2>Name: </h2> <p id ="details"><%= data.Name %></p></div>
+    <div class = "container"><h2>Roll Number: </h2><p id ="details"><%= data.Reg_Number %></p></div>
+    <div class = "container"><h2>Age: </h2><p id ="details"><%= data.Age %></p></div>
+    <div class = "container"><h2>Date of Birth:</h2><p id ="details"> <%= data.DOB %></p></div>
+  </main>
+
+  <footer>
+    <p>© 2024 Your Name</p>
+  </footer>
+</body>
+
+</html>
