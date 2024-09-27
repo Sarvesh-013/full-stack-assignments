@@ -10,25 +10,29 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
+  const { rollNo, name, mark1, mark2, mark3, mark4, mark5 } = req.body;
   const marks = [
-    parseFloat(req.body.mark1),
-    parseFloat(req.body.mark2),
-    parseFloat(req.body.mark3),
-    parseFloat(req.body.mark4),
-    parseFloat(req.body.mark5),
+    parseFloat(mark1),
+    parseFloat(mark2),
+    parseFloat(mark3),
+    parseFloat(mark4),
+    parseFloat(mark5),
   ];
 
   const total = marks.reduce((acc, mark) => acc + mark, 0);
   const average = total / marks.length;
   const grade = getGrade(average);
 
-  res.redirect(`/result?average=${encodeURIComponent(average)}&grade=${encodeURIComponent(grade)}`);
+  res.redirect(`/result?rollNo=${encodeURIComponent(rollNo)}&name=${encodeURIComponent(name)}&total=${encodeURIComponent(total)}&average=${encodeURIComponent(average)}&grade=${encodeURIComponent(grade)}`);
 });
 
 app.get("/result", (req, res) => {
-  const { average, grade } = req.query;
+  const { rollNo, name, total, average, grade } = req.query;
   res.send(`
         <h1>Results</h1>
+        <p><strong>Student Name:</strong> ${name}</p>
+        <p><strong>Roll Number:</strong> ${rollNo}</p>
+        <p><strong>Total Marks:</strong> ${total}</p>
         <p><strong>Average Marks:</strong> ${average}</p>
         <p><strong>Grade:</strong> ${grade}</p>
         <a href="/">Go Back to Form</a>
